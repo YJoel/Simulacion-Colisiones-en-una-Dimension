@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colisiones en una Dimension</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../src/estilos/estilos.css">
 </head>
+
 <body>
-    
+    <h1 class="display-6 text-center"><b>Simulador de colisiones en una dimensión</b></h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mb-3">
+                                <h5 class="text-center">Tipo de colisión</h5>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option value="1">Elástica</option>
+                                    <option value="2">Inelástica</option>
+                                </select>
+                            </div>
+
+                            <hr>
+                            <h5 class="text-center">Datos cuerpo 1</h5>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">m1</span>
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="floatingInputGroup1"
+                                        placeholder="masa 1">
+                                    <label for="floatingInputGroup1">Masa 1</label>
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">v1</span>
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="v1">
+                                    <label for="floatingInputGroup1">Velocidad inicial 1</label>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <h5 class="text-center">Datos cuerpo 2</h5>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">m2</span>
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="floatingInputGroup1"
+                                        placeholder="masa 2">
+                                    <label for="floatingInputGroup1">Masa 2</label>
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">v2</span>
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="v2">
+                                    <label for="floatingInputGroup1">Velocidad inicial 2</label>
+                                </div>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-outline-primary">Simular</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <form action=""></form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
