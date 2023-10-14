@@ -1,3 +1,41 @@
 hr{
     margin: 6px;
 }
+body{
+    padding: 0;
+    margin: 0;
+}
+.container-simulation{
+    position: relative;
+    width: 100%;
+    border: 1px dotted gray;
+    height: 80vh;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+.container-simulation > .item{
+    z-index: 0;
+    border-radius: 50%;
+    position: absolute;
+    height: 3%;
+    width: 3%;
+    top: 50%;
+    margin-top: -2%;
+}
+.container-simulation > .item:nth-child(1){
+    left: 0%;
+    margin-left: 0px;
+    background-color: blue;
+}
+.container-simulation > .item:nth-child(2){
+    right: 0%;
+    margin-right: 0px;
+    background-color: green;
+}
+hr{
+    position: relative;
+    width: 100%;
+    position: relative;
+    vertical-align: middle;
+}
