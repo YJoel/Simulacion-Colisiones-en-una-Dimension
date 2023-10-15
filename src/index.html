@@ -1,260 +1,194 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Colisiones en una Dimension</title>
 
-    <link
-      rel="stylesheet"
-      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="../src/estilos/estilos.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colisiones en una Dimension</title>
 
-  <body>
-    <nav class="navbar bg-primary px-3 mb-3">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/91/91684.png"
-            alt="Logo"
-            width="30"
-            height="24"
-            class="d-inline-block align-text-top"
-          />
-          Colisiones en una dimensión
-        </a>
-      </div>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../src/estilos/estilos.css" />
+</head>
 
-      <!-- Scrollable modal -->
-
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-info-circle-fill"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
-          />
-        </svg>
-      </button>
-
-      <!-- Modal -->
-    </nav>
-
-    <div
-      class="modal fade modal-lg"
-      id="staticBackdrop"
-      tabindex="-1"
-      aria-labelledby="exampleModalScrollableTitle"
-      style="display: none"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title" id="exampleModalScrollableTitle">
-              Colisiones en una dimensión
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <p>
-              El término colisión representa un evento durante el que dos
-              partículas se acercan una a la otra e interactúan mediante
-              fuerzas. Se supone que las fuerzas de interacción son mucho
-              mayores que otras fuerzas externas cualesquiera, así que se puede
-              usar la aproximación del impulso.
-            </p>
-
-            <h3>Tipos de colisión</h3>
-            <h4>Colisión Elástica</h4>
-            <p>
-              Una colisión elástica entre dos objetos es aquella en la que la
-              energía cinética total (así como la cantidad de movimiento total)
-              del sistema es la misma antes y después de la colisión. Para
-              obtener las velocidades finales después de la colisión se
-              consideran las siguientes ecuaciones.
-            </p>
-            <div class="d-flex justify-content-evenly">
-              <img src="./img/ev1.png" alt="">
-              <img src="./img/ev2.png" alt="">
-            </div>
-
-            <br>
-            <h4>Colisión inelástica</h4>
-            <p>
-              En una colisión inelástica la energía cinética total del sistema
-              no es la misma antes ni después de la colisión (aun cuando la
-              cantidad de movimiento del sistema se conserve), existen distintos tipos de colisones inelasticas:
-            </p>
-
-            <div class="row">
-              <div class="col">
-                <div class="card" style="width: 18rem">
-                  <div class="card-header">Perfectamente inelásticas</div>
-                  <div class="card-body">
-                    <p class="card-text">
-                      Se presenta cuando los objetos se unen después de chocar,
-                      como cuando un meteorito choca con la Tierra
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card" style="width: 18rem">
-                  <div class="card-header">Inelásticas</div>
-                  <div class="card-body">
-                    <p class="card-text">
-                      Se presenta cuando los objetos en colisión no se unen,
-                      sino que se pierde parte de la energía cinética, como
-                      el caso de una pelota que choca con una superficie
-                      dura
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <p>Formula usada:</p>
-            <div class="d-flex justify-content-center">
-                <img src="./img/inevf.png" alt="">
-              </div>
-
-          </div>
-          
-
-
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
+<body>
+  <nav class="navbar bg-primary px-3 mb-3">
     <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-              <form action="" id="datos">
-                <div class="mb-3">
-                  <h5 class="text-center">Tipo de colisión</h5>
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                    name="colision"
-                    id="colision"
-                  >
-                    <option value="Elastica">Elástica</option>
-                    <option value="Inelastica">Inelástica</option>
-                  </select>
-                </div>
+      <a class="navbar-brand" href="#">
+        <img src="https://cdn-icons-png.flaticon.com/512/91/91684.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" />
+        Colisiones en una dimensión
+      </a>
+    </div>
 
-                <hr />
-                <h5 class="text-center">Datos cuerpo 1</h5>
-                <div class="input-group mb-3">
-                  <span class="input-group-text">m1</span>
-                  <div class="form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="C1M"
-                      name="C1M"
-                      placeholder="masa 1"
-                    />
-                    <label for="C1M">Masa 1</label>
-                  </div>
-                </div>
+    <!-- Scrollable modal -->
 
-                <div class="input-group mb-3">
-                  <span class="input-group-text">v1</span>
-                  <div class="form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="C1V"
-                      name="C1V"
-                      placeholder="v1"
-                    />
-                    <label for="C1V">Velocidad inicial 1</label>
-                  </div>
-                </div>
-                <hr />
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+      </svg>
+    </button>
 
-                <h5 class="text-center">Datos cuerpo 2</h5>
-                <div class="input-group mb-3">
-                  <span class="input-group-text">m2</span>
-                  <div class="form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="C2M"
-                      name="C2M"
-                      placeholder="masa 2"
-                    />
-                    <label for="C2M">Masa 2</label>
-                  </div>
-                </div>
+    <!-- Modal -->
+  </nav>
 
-                <div class="input-group mb-3">
-                  <span class="input-group-text">v2</span>
-                  <div class="form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="C2V"
-                      name="C2V"
-                      placeholder="v2"
-                    />
-                    <label for="C2V">Velocidad inicial 2</label>
-                  </div>
+  <div class="modal fade modal-lg" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalScrollableTitle" style="display: none" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalScrollableTitle">
+            Colisiones en una dimensión
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            El término colisión representa un evento durante el que dos
+            partículas se acercan una a la otra e interactúan mediante
+            fuerzas. Se supone que las fuerzas de interacción son mucho
+            mayores que otras fuerzas externas cualesquiera, así que se puede
+            usar la aproximación del impulso.
+          </p>
+
+          <h3>Tipos de colisión</h3>
+          <h4>Colisión Elástica</h4>
+          <p>
+            Una colisión elástica entre dos objetos es aquella en la que la
+            energía cinética total (así como la cantidad de movimiento total)
+            del sistema es la misma antes y después de la colisión. Para
+            obtener las velocidades finales después de la colisión se
+            consideran las siguientes ecuaciones.
+          </p>
+          <div class="d-flex justify-content-evenly">
+            <img src="./img/ev1.png" alt="">
+            <img src="./img/ev2.png" alt="">
+          </div>
+
+          <br>
+          <h4>Colisión inelástica</h4>
+          <p>
+            En una colisión inelástica la energía cinética total del sistema
+            no es la misma antes ni después de la colisión (aun cuando la
+            cantidad de movimiento del sistema se conserve), existen distintos tipos de colisones inelasticas:
+          </p>
+
+          <div class="row">
+            <div class="col">
+              <div class="card" style="width: 18rem">
+                <div class="card-header">Perfectamente inelásticas</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    Se presenta cuando los objetos se unen después de chocar,
+                    como cuando un meteorito choca con la Tierra
+                  </p>
                 </div>
-                <div class="d-grid gap-2">
-                  <button type="submit" class="btn btn-outline-primary">
-                    Simular
-                  </button>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card" style="width: 18rem">
+                <div class="card-header">Inelásticas</div>
+                <div class="card-body">
+                  <p class="card-text">
+                    Se presenta cuando los objetos en colisión no se unen,
+                    sino que se pierde parte de la energía cinética, como
+                    el caso de una pelota que choca con una superficie
+                    dura
+                  </p>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
+          <p>Formula usada:</p>
+          <div class="d-flex justify-content-center">
+            <img src="./img/inevf.png" alt="">
+          </div>
+
         </div>
-        <div class="col-8">
-          <div class="card">
-            <div class="card-body">
-              <div class="container-simulation">
-                <div class="item" style="margin-left: 0px"></div>
-                <div class="item" style="margin-right: 0px"></div>
-                <hr />
+
+
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="card">
+          <div class="card-body">
+            <form action="" id="datos">
+              <div class="mb-3">
+                <h5 class="text-center">Tipo de colisión</h5>
+                <select class="form-select" aria-label="Default select example" name="colision" id="colision">
+                  <option value="1">Elástica</option>
+                  <option value="2">Inelástica</option>
+                </select>
               </div>
+
+              <hr />
+              <h5 class="text-center">Datos cuerpo 1</h5>
+              <div class="input-group mb-3">
+                <span class="input-group-text">m1</span>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="C1M" name="C1M" placeholder="masa 1" />
+                  <label for="C1M">Masa 1</label>
+                </div>
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text">v1</span>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="C1V" name="C1V" placeholder="v1" />
+                  <label for="C1V">Velocidad inicial 1</label>
+                </div>
+              </div>
+              <hr />
+
+              <h5 class="text-center">Datos cuerpo 2</h5>
+              <div class="input-group mb-3">
+                <span class="input-group-text">m2</span>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="C2M" name="C2M" placeholder="masa 2" />
+                  <label for="C2M">Masa 2</label>
+                </div>
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text">v2</span>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="C2V" name="C2V" placeholder="v2" />
+                  <label for="C2V">Velocidad inicial 2</label>
+                </div>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-outline-primary">
+                  Simular
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="card">
+          <div class="card-body">
+            <div class="container-simulation">
+              <div class="item" style="margin-left: 0px"></div>
+              <div class="item" style="margin-right: 0px"></div>
+              <hr />
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="logica/logica.js"></script>
-  </body>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="logica/logica.js"></script>
+</body>
+
 </html>
