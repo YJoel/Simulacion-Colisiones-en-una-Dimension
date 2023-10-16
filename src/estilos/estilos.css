@@ -5,6 +5,31 @@ body{
     padding: 0;
     margin: 0;
 }
+.results{
+    position: relative;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    border: 1px solid blue;
+    padding: 5px;
+}
+.result > .container-results{
+    position: relative;
+    width: 100px;
+    border: 1px solid black;
+    display: flex;
+}
+.results > .container-results > .result-item{
+    position: relative;
+    width: 10px;
+    aspect-ratio: 1/1;
+}
+.results > .container-results > .result-value{
+    position: relative;
+    text-align: center;
+}
 .container-simulation{
     position: relative;
     width: 100%;
@@ -18,20 +43,18 @@ body{
     z-index: 0;
     border-radius: 50%;
     position: absolute;
-    height: 3%;
     width: 3%;
+    aspect-ratio: 1/1;
     top: 50%;
-    margin-top: -2%;
+    margin-top: -3%;
 }
 .container-simulation > .item:nth-child(1){
     left: 0%;
     margin-left: 0px;
-    background-color: blue;
 }
 .container-simulation > .item:nth-child(2){
     right: 0%;
     margin-right: 0px;
-    background-color: green;
 }
 hr{
     position: relative;
