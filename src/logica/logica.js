@@ -30,7 +30,7 @@ document.getElementById("datos").addEventListener("submit", (e) => {
             let vf2 = (((2 * mIni1 * vIni1) - (vIni2 * mIni1) + (mIni2 * vIni2)) / (mIni1 + mIni2))
             let vf1 = -vIni1 + vIni2 + vf2
 
-            elastica(vf1.toFixed(3), vf2.toFixed(3))
+            elastica([mIni1, mIni2], [vIni1, vIni2], [vf1.toFixed(3), vf2.toFixed(3)])
 
             for (let i = 0; i < 2; i++) {
                 if (!choque) {
@@ -74,14 +74,14 @@ document.getElementById("datos").addEventListener("submit", (e) => {
                         dFin1 = 94
                         dFin2 = 0
                     }
-                    else if(vf2 == 0 && vf1 < 0){
+                    else if (vf2 == 0 && vf1 < 0) {
                         aux1 = dFin1 / ((vf1 / (vf1 - vf2)) * 94)
                         aux2 = dFin2 / (((-vf2) / (vf1 - vf2)) * 94)
 
                         // SOLO EL SEGUNDO REGRESA A SU POSICION INICIAL
                         dFin1 = 0
                     }
-                    else if(vf1 < 0 && vf2 < 0){
+                    else if (vf1 < 0 && vf2 < 0) {
                         aux1 = Math.abs((dFin1 / ((vf1 / (vf1 - vf2)) * 94)))
                         aux2 = Math.abs((dFin2 / (((-vf2) / (vf1 - vf2)) * 94)))
 
@@ -114,7 +114,7 @@ document.getElementById("datos").addEventListener("submit", (e) => {
             // VELOCIDAD CONJUNTA DE LOS OBJETOS DESPUES DEL CHOQUE
             let vf = (((vIni1 * mIni1) + (vIni2 * mIni2)) / (mIni1 + mIni2))
 
-            inelastica(vf.toFixed(3))
+            inelastica([mIni1, mIni2], [vIni1, vIni2], vf.toFixed(3))
 
             for (let i = 0; i < 2; i++) {
                 if (!choque) {
@@ -133,7 +133,7 @@ document.getElementById("datos").addEventListener("submit", (e) => {
                     let aux1 = 0
 
                     if (vf < 0) {
-                        aux1 = Math.abs((dFin2 / ((vf / (vf + vIni2)) * 94)))
+                        aux1 = Math.abs((dFin2 / ((vf / (vf - vIni2)) * 94)))
 
                         dFin1 = 0
                         dFin2 = 94
@@ -142,7 +142,7 @@ document.getElementById("datos").addEventListener("submit", (e) => {
                         // SI SU VELOCIDAD ES 0, NO PODRAN MOVERSE DE SU POSICIÓN DE CHOQUE
                     }
                     else if (vf > 0) {
-                        aux1 = Math.abs((dFin1 / ((vf / (vf - vIni1)) * 94)))
+                        aux1 = Math.abs((dFin1 / ((vf / (vf + vIni1)) * 94)))
 
                         dFin1 = 94
                         dFin2 = 0
