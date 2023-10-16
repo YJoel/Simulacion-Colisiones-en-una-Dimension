@@ -12,14 +12,29 @@ body{
     justify-content: space-around;
     align-items: center;
     margin: auto;
-    border: 1px solid blue;
+    border: 1px solid #036CFF;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px #036CFF;
     padding: 5px;
 }
-.result > .container-results{
+.results > .title{
+    position: absolute;
+    width: auto;
+    font-size: small;
+    height: 30px;
+    background-color: #036CFF;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    bottom: 100%;
+}
+.results > .container-results{
     position: relative;
     width: 100px;
-    border: 1px solid black;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .results > .container-results > .result-item{
     position: relative;

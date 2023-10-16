@@ -23,8 +23,8 @@ function elastica(vf1, vf2){
     resultItems[0].style.backgroundColor = items[0].style.backgroundColor
     resultItems[1].style.backgroundColor = items[1].style.backgroundColor   
 
-    resultValues[0].innerHTML = vf1
-    resultValues[1].innerHTML = vf2
+    resultValues[0].innerHTML = `${vf1} m/s`
+    resultValues[1].innerHTML = `${vf2} m/s`
     containerResults[0].append(resultItems[0], resultValues[0])
     containerResults[1].append(resultItems[1], resultValues[1])
 }
@@ -41,6 +41,6 @@ function inelastica(vf){
     
     resultItems.style.backgroundColor = "red"
 
-    resultValues.innerHTML = vf
+    resultValues.innerHTML = `${vf} m/s`
     containerResults[0].append(resultItems, resultValues)
 }
