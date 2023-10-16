@@ -14,7 +14,8 @@
   <nav class="navbar bg-primary px-3 mb-3">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="https://cdn-icons-png.flaticon.com/512/91/91684.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" />
+        <img src="https://cdn-icons-png.flaticon.com/512/91/91684.png" alt="Logo" width="30" height="24"
+          class="d-inline-block align-text-top" />
         Colisiones en una dimensión
       </a>
     </div>
@@ -22,15 +23,18 @@
     <!-- Scrollable modal -->
 
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
-        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill"
+        viewBox="0 0 16 16">
+        <path
+          d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
       </svg>
     </button>
 
     <!-- Modal -->
   </nav>
 
-  <div class="modal fade modal-lg" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalScrollableTitle" style="display: none" aria-hidden="true">
+  <div class="modal fade modal-lg" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalScrollableTitle"
+    style="display: none" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
@@ -117,7 +121,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-4">
+      <div class="col-3">
         <div class="card">
           <div class="card-body">
             <form action="" id="datos">
@@ -165,28 +169,70 @@
                 </div>
               </div>
               <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-outline-primary">
+                <button type="submit" class="btn btn-primary">
                   Simular
                 </button>
+
               </div>
             </form>
+            <div class="d-grid gap-2" style="margin-top: 14px;">
+              <button id="valores_prueba" class="btn btn-outline-primary">Valores de prueba</button>
+            </div>
           </div>
         </div>
       </div>
+
       <div class="col-8">
         <div class="card">
           <div class="card-body">
-            <div class="results">
-              <div class="title">
-                Velocidad Final
+            <div class="row">
+              <div class="col-4">
+
+                <div class="results">
+                  <div class="title">
+                    Antes
+                  </div>
+                  <div class="container-results">
+
+                  </div>
+                  <div class="container-results">
+
+                  </div>
+                  
+                </div>
               </div>
-              <div class="container-results">
-                
+
+              <div class="col-4">
+                <div class="results">
+                  <div class="title">
+                    Velocidad Final
+                  </div>
+                  <div class="container-results">
+
+                  </div>
+                  <div class="container-results">
+
+                  </div>
+                </div>
               </div>
-              <div class="container-results">
-                
+
+              <div class="col-4">
+
+                <div class="results">
+                  <div class="title">
+                    Despues de la sumulasion
+                  </div>
+                  <div class="container-results">
+
+                  </div>
+                  <div class="container-results">
+
+                  </div>
+                </div>
+
               </div>
             </div>
+
             <div class="container-simulation">
               <div class="item" style="margin-left: 0px; background-color: blue;"></div>
               <div class="item" style="margin-right: 0px; background-color: green;"></div>
@@ -201,6 +247,7 @@
   <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="logica/logica.js"></script>
   <script src="logica/auxx.js"></script>
+  <script src="logica/generarNumerosAleatorios.js"></script>
 </body>
 
 </html>
